@@ -3,9 +3,9 @@
 #
 if [ "oi" = "1" ];then
 find Brute-Force
-        echo "Encontrei"
+        echo "Pastas foram encontradas"
 else
-        echo "Nao encontrei"
+        echo "ERRO: Pastas nao foram encontradas"
 git clone https://github.com/MRX8001/Brute-Force
 git clone https://github.com/Pure-L0G1C/Instagram
 fi
